@@ -60,9 +60,6 @@ cd /Users/fara7at/Documents/java-spring/heb/atm-api
 ```
 
 ### 3. Run the Application
-```bash
-./gradlew bootRun
-```
 
 The application will start on `http://localhost:8080`
 
