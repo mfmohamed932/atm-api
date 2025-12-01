@@ -50,9 +50,6 @@ A Spring Boot REST API application that simulates ATM (Automated Teller Machine)
 ## 🚀 Getting Started
 
 ### 1. Clone and Navigate to Project
-```bash
-cd /Users/fara7at/Documents/java-spring/heb/atm-api
-```
 
 ### 2. Build the Project
 ```bash
