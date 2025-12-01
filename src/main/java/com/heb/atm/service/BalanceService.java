@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -21,9 +22,9 @@ public class BalanceService {
 
     private final AccountRepository accountRepository;
 
+    @Transactional
     public BalanceResponse getBalance(Long accountId) {
         log.info("Getting balance for account ID: {}", accountId);
-
         try {
             Account account = accountRepository.findById(accountId)
                     .orElseThrow(() -> {

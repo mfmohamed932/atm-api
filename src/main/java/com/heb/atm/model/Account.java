@@ -53,6 +53,9 @@ public class Account {
     @Column(nullable = false)
     private boolean active = true;
 
+    @Version
+    private Long version;
+
     public BigDecimal getRemainingDailyLimit() {
         if (lastWithdrawalDate == null || !lastWithdrawalDate.equals(LocalDate.now())) {
             dailyWithdrawnAmount = BigDecimal.ZERO;

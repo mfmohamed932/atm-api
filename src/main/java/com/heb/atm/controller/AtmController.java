@@ -112,11 +112,7 @@ public class AtmController {
                     content = @Content(schema = @Schema(implementation = com.heb.atm.exception.ErrorResponse.class)))
     })
     public ResponseEntity<TransactionResponse> completeDeposit(@Valid @RequestBody CompleteTransactionRequest request) {
-        TransactionResponse response = depositService.completeDeposit(
-                request.getTransactionId(),
-                request.getStatus(),
-                request.getReason()
-        );
+        TransactionResponse response = depositService.completeDeposit(request);
         return ResponseEntity.ok(response);
     }
 

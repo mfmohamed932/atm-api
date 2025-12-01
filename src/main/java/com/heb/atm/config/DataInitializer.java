@@ -22,32 +22,32 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (accountRepository.count() == 0) {
-            log.info("Initializing database with sample data...");
+        // Force reinitialize data on every startup
+        log.info("Reinitializing database with fresh sample data...");
 
-            List<Account> accounts = Arrays.asList(
-                    createAccount("4532015112830366", "John Doe", "1234",
-                            new BigDecimal("5000.00"), new BigDecimal("1000.00")),
-                    createAccount("5425233430109903", "Jane Smith", "5678",
-                            new BigDecimal("10000.00"), new BigDecimal("2000.00")),
-                    createAccount("4916338506082832", "Bob Johnson", "9012",
-                            new BigDecimal("2500.00"), new BigDecimal("500.00")),
-                    createAccount("4024007134564842", "Alice Williams", "3456",
-                            new BigDecimal("15000.00"), new BigDecimal("3000.00"))
-            );
+        // Delete all existing accounts and transactions
+        accountRepository.deleteAll();
 
-            accountRepository.saveAll(accounts);
-            log.info("Sample data initialized successfully. Created {} accounts.", accounts.size());
-            log.info("Sample accounts:");
-            accounts.forEach(account ->
-                log.info("  Card: {}, PIN: {}, Balance: ${}",
-                    MaskingUtil.maskCardNumber(account.getCardNumber()),
-                    account.getPin(),
-                    account.getBalance())
-            );
-        } else {
-            log.info("Database already contains data. Skipping initialization.");
-        }
+        List<Account> accounts = Arrays.asList(
+                createAccount("4532015112830366", "John Doe", "1234",
+                        new BigDecimal("5000.00"), new BigDecimal("1000.00")),
+                createAccount("5425233430109903", "Jane Smith", "5678",
+                        new BigDecimal("10000.00"), new BigDecimal("2000.00")),
+                createAccount("4916338506082832", "Bob Johnson", "9012",
+                        new BigDecimal("2500.00"), new BigDecimal("500.00")),
+                createAccount("4024007134564842", "Alice Williams", "3456",
+                        new BigDecimal("15000.00"), new BigDecimal("3000.00"))
+        );
+
+        accountRepository.saveAll(accounts);
+        log.info("Sample data initialized successfully. Created {} accounts.", accounts.size());
+        log.info("Sample accounts:");
+        accounts.forEach(account ->
+            log.info("  Card: {}, PIN: {}, Balance: ${}",
+                MaskingUtil.maskCardNumber(account.getCardNumber()),
+                account.getPin(),
+                account.getBalance())
+        );
     }
 
     private Account createAccount(String cardNumber, String customerName, String pin,
