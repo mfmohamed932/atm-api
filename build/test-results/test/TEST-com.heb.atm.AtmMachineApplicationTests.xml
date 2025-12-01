@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.heb.atm.AtmMachineApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-01T02:51:55" hostname="Mohameds-MBP-3" time="0.353">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.heb.atm.AtmMachineApplicationTests" time="0.353"/>
+  <system-out><![CDATA[20:51:53.684 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.heb.atm.AtmMachineApplicationTests]: AtmMachineApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:51:53.733 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.heb.atm.AtmMachineApplication for test class com.heb.atm.AtmMachineApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-11-30T20:51:53.891-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.AtmMachineApplicationTests   : Starting AtmMachineApplicationTests using Java 21.0.3 with PID 2331 (started by fara7at in /Users/fara7at/Desktop/test-git/atm-api)
+2025-11-30T20:51:53.892-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.AtmMachineApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2025-11-30T20:51:54.219-06:00  INFO 2331 --- [atm-machine] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-30T20:51:54.246-06:00  INFO 2331 --- [atm-machine] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2025-11-30T20:51:54.440-06:00  INFO 2331 --- [atm-machine] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-30T20:51:54.460-06:00  INFO 2331 --- [atm-machine] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-11-30T20:51:54.474-06:00  INFO 2331 --- [atm-machine] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-30T20:51:54.568-06:00  INFO 2331 --- [atm-machine] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-30T20:51:54.579-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-30T20:51:54.734-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/atmdb user=SA
+2025-11-30T20:51:54.738-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-30T20:51:54.750-06:00  WARN 2331 --- [atm-machine] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-30T20:51:55.150-06:00  INFO 2331 --- [atm-machine] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-30T20:51:55.167-06:00  INFO 2331 --- [atm-machine] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-30T20:51:55.476-06:00  WARN 2331 --- [atm-machine] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-30T20:51:55.662-06:00  INFO 2331 --- [atm-machine] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/atmdb'
+2025-11-30T20:51:55.695-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.AtmMachineApplicationTests   : Started AtmMachineApplicationTests in 1.902 seconds (process running for 2.429)
+2025-11-30T20:51:55.698-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.config.DataInitializer       : Reinitializing database with fresh sample data...
+2025-11-30T20:51:55.801-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.config.DataInitializer       : Sample data initialized successfully. Created 4 accounts.
+2025-11-30T20:51:55.801-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.config.DataInitializer       : Sample accounts:
+2025-11-30T20:51:55.802-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.config.DataInitializer       :   Card: ************0366, PIN: 1234, Balance: $5000.00
+2025-11-30T20:51:55.802-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.config.DataInitializer       :   Card: ************9903, PIN: 5678, Balance: $10000.00
+2025-11-30T20:51:55.802-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.config.DataInitializer       :   Card: ************2832, PIN: 9012, Balance: $2500.00
+2025-11-30T20:51:55.802-06:00  INFO 2331 --- [atm-machine] [    Test worker] com.heb.atm.config.DataInitializer       :   Card: ************4842, PIN: 3456, Balance: $15000.00
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/fara7at/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.10/90ed94ac044ea8953b224304c762316e91fd6b31/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
